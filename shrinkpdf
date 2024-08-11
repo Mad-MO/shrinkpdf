@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Script info
-script_name="domoShrinkPDF"
+script_name="shrinkpdf"
 script_version="v1.1"
 script_tools="echo date figlet tput clear test"
 

@@ -1,7 +1,7 @@
 
 # Description
 
-shrinkPDF - Shrink PDFs in size
+shrinkpdf - Shrink PDFs in size
 
 # Usage
 
