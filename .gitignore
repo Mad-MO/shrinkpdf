@@ -1,2 +1,4 @@
-TestArea/*
-TestFiles/*
+.DS_Store
+Thumbs.db
+
+testdir
