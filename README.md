@@ -1,18 +1,35 @@
 
-# Description
+# shrinkpdf (Script to shrink PDF files)
+
+## Description
 
 shrinkpdf - Shrink PDFs in size
 
-# Usage
+## Screenshot
 
-Todo...
+TODO Screenshot
+![Screenshot](./Screenshot.png)
 
-# Todos
+## Usage
 
-- Make testfiles suitable for public use
-- Add testfiles to git
+TODO Usage
 
-# Author
+## Background
 
-by domo
+TODO Background
 
+## Development
+
+The script "runtests" generates the directory "testdir" with some test files and runs the script on them:
+
+```Bash
+#> ./runtests
+```
+
+## License
+
+MIT License, see "License.txt".
+
+## Author
+
+By domo
