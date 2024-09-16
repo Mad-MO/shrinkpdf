@@ -3,20 +3,25 @@
 
 ## Description
 
-shrinkpdf - Shrink PDFs in size
+Shrink PDFs in size
 
 ## Screenshot
 
-TODO Screenshot
 ![Screenshot](./Screenshot.png)
 
 ## Usage
 
-TODO Usage
+```Bash
+#> ./shrinkpdf file1 file2 ...
+```
 
 ## Background
 
-TODO Background
+The file is shrinked via ghostscript and the PDFSETTING for ebook.
+
+```Bash
+#> gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -q -o outputfile inputfile
+```
 
 ## Development
 
