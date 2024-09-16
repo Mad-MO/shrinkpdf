@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+TESTDIR="$(pwd)/testdir"
+
+# Preparing test environment
+echo "Preparing test environment"
+
+# Delete old testdir
+echo "  Delete old testdir"
+rm -rf "testdir"
+
+# Create new testdir
+mkdir -p "testdir"
+cp test.pdf testdir/good.pdf
+cp test.pdf testdir/wrong.pfd
+echo dummy > testdir/broken.pdf
+
+# Run Tool
+echo
+echo "Run tool"
+./shrinkpdf $TESTDIR/*
