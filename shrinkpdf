@@ -8,7 +8,7 @@
 # Script info
 script_name="shrinkpdf"
 script_version="v1.1"
-script_tools="echo date figlet tput clear test"
+script_tools="date tr gs"
 
 
 
@@ -132,12 +132,6 @@ for inputfile in "$@"; do
   basename="${inputfile%.[^.]*}"
   extension=$(echo "${inputfile:${#basename} + 1}" | tr [:upper:] [:lower:])
 
-  #echo "inputfile: $inputfile"
-  #echo "filename:  $filename"
-  #echo "directory: $directory"
-  #echo "basename:  $basename"
-  #echo "Extension: $extension"
-
   # Handle file shrinking
   filenum=$((filenum+1))
   echo -ne "$color_section[$filenum/$filecount]$color_off "
@@ -146,12 +140,14 @@ for inputfile in "$@"; do
     outputfile="$basename.shrinked.pdf"
     echo -e "Shrinking $color_mark'"$(basename "$inputfile")"'$color_off to $color_mark'"$(basename "$outputfile")"'$color_off"
     gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -q -o "$outputfile" "$inputfile"
+    if [ $? -ne 0 ]; then
+      echo -e "$color_mark'"$inputfile"'$color_error could not be shrinked!$color_off"
+      rm -f "$outputfile"
+    fi
   else
     echo -e "$color_mark'"$inputfile"'$color_error has a wrong extension!$color_off"
   fi
 done
-
-
 
 ###############################################################################
 # Script End - Implement your script above #
