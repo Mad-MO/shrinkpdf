@@ -37,4 +37,4 @@ MIT License, see "License.txt".
 
 ## Author
 
-By domo
+By Martin Ochs
