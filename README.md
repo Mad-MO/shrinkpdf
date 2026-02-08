@@ -1,5 +1,7 @@
 
-# shrinkpdf (Script to shrink PDF files)
+# shrinkpdf
+
+Script to shrink PDF files
 
 ## Description
 
